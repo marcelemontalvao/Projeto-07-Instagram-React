@@ -31,7 +31,7 @@ function Post(props) {
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon style={{color: color}} name={iconName} onClick={() => setPostLike(postLike ? false : true)}></ion-icon>     
+                        <ion-icon style={{color: color}} name={iconName} onClick={()   => setPostLike(postLike ? false : true)}></ion-icon>     
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
