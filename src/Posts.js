@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 function Post(props) {
-    const [style, setStyle] = useState("heart-outline");    
-       
+    const [postLike, setPostLike] = useState(false);    
+    let color, iconName;
+    if (postLike) {
+        color = "red"
+        iconName = "heart"
+    }else {
+        color = "initial"
+        iconName = "heart-outline"
+    }
+    
+
     return (
         <div class="post">
             <div class="topo">
@@ -15,14 +24,14 @@ function Post(props) {
                 </div>
             </div>
 
-            <div class="conteudo">
+            <div class="conteudo" onClick={() => setPostLike(postLike ? false : true)}>
                 <img src={props.postObject.image2}  />
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                    <ion-icon name={style} onClick={() => setStyle("heart")}></ion-icon>     
+                        <ion-icon style={{color: color}} name={iconName} onClick={() => setPostLike(postLike ? false : true)}></ion-icon>     
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
