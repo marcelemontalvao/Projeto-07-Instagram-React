@@ -1,7 +1,7 @@
 function Story(props) {
     return (
         <div class="story">
-                <div class={props.class}>
+                <div class="imagem">
                     <img src={props.storyObject.image} />
                 </div>
                 <div class="usuario">{props.storyObject.user}</div>

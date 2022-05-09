@@ -16,7 +16,7 @@ export default function User() {
    ];
 
     return (
-        <div>
+        <div class="usuario">
             {objectUser.map(user => <ComponentUser userObject={user} />)}
         </div>
     );
